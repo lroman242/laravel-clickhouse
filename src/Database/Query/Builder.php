@@ -142,6 +142,13 @@ class Builder extends BaseBuilder
             }
         }
 
+        //remove null fields 
+        foreach ($values as $key => $value) {
+            $values[$key] = array_filter($values[$key], function ($value) {
+                return $value !== null;
+            });
+        }
+        
         return $this->connection->insert(
             $this->grammar->compileInsert($this, $values),
             Arr::flatten($values)
