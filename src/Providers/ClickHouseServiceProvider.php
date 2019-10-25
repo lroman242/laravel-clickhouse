@@ -23,5 +23,7 @@ class ClickHouseServiceProvider extends ServiceProvider
         });
 
         Model::setConnectionResolver($db);
+        //Enable eloquent events
+        Model::setEventDispatcher($this->app['events']);
     }
 }
