@@ -1,7 +1,7 @@
 {
   "name": "libern/laravel-clickhouse",
   "type": "library",
-  "description": "Clickhouse Laravel package",
+  "description": "Implementation of Eloquent model for Clickhouse database",
   "license": "MIT",
   "keywords": [
     "laravel",
@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "laravel/lumen-framework": "5.5.*",
+    "laravel/lumen-framework": "~5.5",
     "libern/clickhouse-builder": "~1.0"
   },
   "require-dev": {
